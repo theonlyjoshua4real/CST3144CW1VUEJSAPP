@@ -8,10 +8,10 @@
 </head>
 <body>
     <div id="app">
-        <h1></h1>
+        <h1>{{name}}</h1>
 
         <button>View Cart</button>
-        <button></button>
+        <button>{{total}}</button>
         <label for="">Sort by:</label>
         <select name="" id="">
             <option value="">Subject</option>
@@ -30,17 +30,19 @@
         </div>
 
         <div>
-            <div>
-                <img src="" alt="">
-                <h2></h2>
-                <p>Location: </p>
-                <p>Price: </p>
-                <p>Spaces: </p>
+            <div v-for="lesson in lessons">
+                <img v-bind:src="lesson.imgurl" alt="">
+                <h2>{{lesson.name}}</h2>
+                <p>Location: {{lesson.locat}}</p>
+                <p>Price: {{lesson.price}}</p>
+                <p>Spaces: {{lesson.spaces}}</p>
                 <button>Add to Cart</button>
             </div>
         </div>
 
 
     </div>
+    <a href="https://www.flaticon.com/free-icons/literature" title="literature icons">Literature icons created by Freepik - Flaticon</a>
+    <script src="js/index.js"></script>
 </body>
 </html>
